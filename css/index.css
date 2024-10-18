@@ -1,0 +1,479 @@
+:root {
+    --footer-font: 'M PLUS Rounded 1c', sans-serif;
+    --header-font: 'Sansita Swashed', sans-serif;
+    --header-content-font: 'Saira', sans-serif;
+    --main-title-font: 'Libre Caslon Text', sans-serif;
+    --yellow: #F9d144;
+    --cream: #FAF5E5;
+    --white: #ffffff;
+    --black: #000000;
+}
+  
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: var(--footer-font);
+    outline: none; border: none;
+    text-decoration: none;
+    transition: .2s linear;
+}
+  
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+    background: var(--cream);
+}
+
+/*==========| Background-image and frames |==========*/
+#background-photo {
+    background: url(../img/index-bg.png);
+    background-size: cover;
+    background-position: center;
+}
+  
+#intro-header {
+    background: rgba(0, 0, 0, 0.5);
+    min-height: 100vh;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+}
+  
+#yellow-frame {
+    background: rgba(246, 195, 11, 0.2);
+    width: 100%;
+    min-height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+}
+/*==================================================================*/
+
+/*=============| Navigations and Icons Section Styles |=============*/
+.navigation-bar {
+    position: fixed;
+    top: 23px; left: 0; right: 0;
+    margin: 0 auto;
+    background: rgba(1, 1, 1, 0.8);
+    border-radius: 106px;
+    width: 80%; 
+    max-width: 869px; 
+    height: auto; 
+    padding: 1rem 2rem; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    border: .2rem solid #FCE18A;
+}
+  
+.logo-name {
+    display: none;
+}
+  
+.logo {
+    border-radius: 44px;
+    width: 68px;
+    height: 63px;
+    position: relative;
+    object-fit: cover;
+    margin-left: 2rem;
+}
+  
+.navigation {
+    margin-left: auto;
+}
+  
+.navigation-bar .navigation a {
+    font-size: 2rem;
+    padding: 0 1.5rem;
+    color: var(--white);
+}
+  
+.navigation-bar .navigation a:hover {
+    color: var(--yellow);
+}
+  
+.navigation-bar #toggler {
+    display: none;
+}
+
+.navigation-bar .hamburger {
+    display: none
+}
+
+.navigation-bar .fa-bars {
+    font-size: 3rem;
+    color: #333;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    border: .1rem solid rgba(0,0,0,.3);
+    display: none;
+}
+/*===================================================*/
+
+/*=============| Header Content Style |=============*/
+header {
+    padding: 2rem 9%;
+}
+  
+.header-content {
+    display: flex;
+    align-items: center;
+    min-height: 85vh;
+}
+  
+.header-content .content {
+    max-width: 75rem;
+}
+  
+.header-content .content h1 {
+    font-family: var(--header-font);
+    font-size: 8.5rem;
+    text-decoration: underline;
+}
+  
+.header-content .content span {
+    font-size: 3.8rem;
+    font-family: var(--header-font);
+    font-weight: bold;
+    padding: 1rem 0;
+    line-height: 2;
+}
+  
+.header-content .content p {
+    font-size: 2.1rem;
+    font-weight: 600;
+    max-width: 67rem;
+    font-family: var(--header-content-font);
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+  
+.button {
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background: rgba(1, 1, 1, 0.7);
+    color: #fff;
+    padding: .9rem 3.5rem;
+    cursor: pointer;
+    font-size: 3.7rem;
+    font-family: var(--header-content-font);
+    font-weight: bold;
+}
+  
+.button:hover {
+    background: var(--yellow);
+}
+/*===================================================*/
+
+/*=====| Header Content Sunflower Image Style |=====*/
+#intro-header .outer-circle-yellow {
+    position: absolute;
+    width: calc(527px + 10vw);
+    height: calc(500px + 10vh);
+    top: 136px;
+    left: 878px;
+}
+  
+#intro-header .overlap {
+    position: relative;
+    width: calc(435px + 10vw);
+    height: calc(458px + 10vh); 
+    left: -40px; 
+    background-image: url(../img/OuterCircleYellow.png);
+    background-size: 100% 100%; 
+}
+  
+#intro-header .inner-circle-white {
+    position: absolute;
+    width: calc(432px + 8vw);
+    height: calc(432px + 8vh); 
+    top: 22px;
+    left: 17px; 
+}
+  
+#intro-header .sunflower {
+    position: absolute;
+    width: calc(350px + 8vw);
+    height: calc(443px + 8vh); 
+    top: -13px; 
+    left: 61px;
+    object-fit: cover;
+}
+/*===========================================================*/
+
+/*==================| Main Contents Style |==================*/
+.content .row {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+}
+
+.content .row .video-container {
+    flex: 1 1 40rem;
+    position: relative;
+    margin: 2rem;
+}
+
+.content .row .video-container video {
+    width: 100%;
+    border: 1.5rem solid #F6C30B;
+    border-radius: .5rem;
+    box-shadow: 0 .5 1rem rgba(0,0,0,.1);
+    height: 100%;
+    object-fit: cover;
+}
+
+.content .row .video-container h3 {
+    position: absolute;
+    top:50%; transform: translateY(-50%);
+}
+
+.content .row .brief-content {
+    flex: 1 1 40rem;
+}
+
+.content .row .brief-content h3 {
+    font-size: 4rem; 
+    margin-top: 0; 
+    font-family: var(--main-title-font);
+    padding-bottom: 4rem;
+}
+
+.content .row .brief-content p {
+    font-size: 2.2rem; 
+    line-height: 1.5;
+    padding-bottom: 2rem;
+    font-family: var(--header-content-font);
+    font-weight: 500;
+}
+/*===========================================================*/
+
+/*=============| Footer & Credit Content Style |============*/
+footer {
+    position: relative; 
+    background: url(../img/footer-bg.png) no-repeat center center;
+    background-size: cover;
+    padding: 2rem 1.5rem; 
+    z-index: 1; 
+}
+  
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(1, 1, 1, 0.7); 
+    z-index: -1; 
+}
+  
+footer .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem;
+    z-index: 1; 
+    text-align: center;
+}
+  
+footer .box-container .box {
+    flex: 1 1 20rem;
+    margin: 1rem;
+}
+  
+footer .box-container .box h3 {
+    color: var(--white);
+    font-size: 3.8rem;
+    font-family: var(--footer-font);
+    padding: 0;
+}
+  
+footer .box-container .box a {
+    display: block;
+    color: var(--white);
+    font-size: 1.5rem;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+}
+  
+footer .box-container .box a:hover {
+    color: var(--yellow);
+}
+  
+.credit {
+    background: var(--black);
+    text-align: center;
+    color: var(--white);
+    padding: .85rem;
+    font-style: oblique;
+}
+/*===================================================*/
+
+
+
+/*=============| Large Desktop Viewports Style |=============*/
+@media (max-width: 1200px) {
+    .outer-circle-yellow {
+      display: none;
+    }
+}
+  
+/*=============| Desktop Viewports Style |=============*/
+  @media (max-width: 991px) {
+    html {
+        font-size: 58%;
+    }
+  
+    .navigation-bar {
+        padding: 2rem;
+    }
+  
+    header {
+        padding: 2rem 6rem;
+    }
+  
+    #background-photo {
+        background-position: left;
+    }
+  
+    .picture-container {
+      display: block;
+      text-align: center;
+    }
+
+    .content .row .brief-content h3 {
+        font-size: 3rem; 
+        text-align: center;
+    }
+    
+    .content .row .brief-content p {
+        font-size: 1.8rem; 
+        text-align: center;
+    }
+}
+  
+
+/*=============| Tablet Viewports Style |=============*/
+@media (max-width: 768px) {
+  
+    html {
+      font-size: 55%;
+    } 
+  
+    .header-content .content {
+      text-align: center;
+      padding: 2rem 0;
+      margin-left: 2.2rem;
+    }
+  
+    .header-content .content h1 {
+      font-size: 7.5rem;
+    }
+  
+    .header-content .content span {
+      font-size: 3rem;
+    }
+  
+    .navigation-bar {
+        width: 90%;
+        padding: 1rem 1rem;
+    }
+
+    .navigation-bar .hamburger {
+        display: block;
+        cursor: pointer; 
+        font-size: 3rem; 
+        transition: transform 0.3s ease; 
+        color: white;
+        margin-right: 5rem;
+    }
+  
+    .navigation-bar .fa-bars {
+        display: block;
+        color: var(--white);
+    }
+  
+    .navigation-bar .navigation {
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background: #eee;
+        border-top: .1rem solid rgba(0,0,0,.1);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+  
+    .navigation-bar #toggler:checked ~ .navigation {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        background-color: transparent;
+    }
+  
+    .navigation-bar .navigation a {
+        margin: 1rem 0;
+        padding: 1.5rem;
+        background: rgba(1, 1, 1, 0.8);
+        color: var(--white);
+        border: .18rem solid #FCE18A;
+        border-radius: 5rem;
+        display: block;
+        text-align: center;
+        text-decoration: none;   
+    }
+
+}
+  
+/*=============| Mobile Viewports Style |=============*/
+@media (max-width: 480px) {
+    html {
+        font-size: 48%;
+    }
+  
+    .header-content {
+        min-height: 70vh;
+    }
+  
+    .navigation-bar {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+    }
+    
+    .navigation-bar a {
+        padding: 0.5rem 0;
+    }
+  
+    footer .box-container {
+      text-align: left;
+    }
+}
+  
+  /*=============| Small Mobile Viewports Style |=============*/
+@media (max-width: 430px) {
+    html {
+        font-size: 42%;
+    }
+  
+    .header-content {
+        min-height: 90vh;
+    }
+  
+    .navigation-bar {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+    }
+    
+    .navigation-bar a {
+        padding: 0.5rem 0;
+    }
+}

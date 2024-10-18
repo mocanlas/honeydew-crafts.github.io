@@ -1,0 +1,540 @@
+:root {
+  --footer-font: 'M PLUS Rounded 1c', sans-serif;
+  --header-font: 'Sansita Swashed', sans-serif;
+  --header-content-font: 'Saira', sans-serif;
+  --main-title-font: 'Libre Caslon Text', sans-serif;
+  --yellow: #F9d144;
+  --cream: #FAF5E5;
+  --white: #ffffff;
+  --black: #000000;
+}
+  
+* {
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+  font-family: var(--footer-font);
+  outline: none; border: none;
+  text-decoration: none; 
+  text-transform: capitalize;
+  transition: .2s linear;
+}
+  
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+  overflow-x: hidden;
+  background: var(--cream);
+  }
+  
+/*==========| Background-image and frames |==========*/
+#background-photo {
+  background: url(../img/product-bg.png);
+  background-size: cover;
+  background-position: center;
+}
+  
+.intro-header {
+  background: rgba(0, 0, 0, 0.55);
+  min-height: 100vh;
+  height: auto; 
+  position: relative;
+  overflow: hidden;
+}
+  
+.yellow-frame {
+  width: 100%; 
+  min-height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+}
+/*==================================================================*/
+
+/*=============| Navigations and Icons Section Styles |=============*/
+.navigation-bar {
+  position: fixed;
+  top: 23px; left: 0; right: 0;
+  margin: 0 auto;
+  background: rgba(1, 1, 1, 0.8);
+  border-radius: 106px;
+  width: 80%; 
+  max-width: 869px; 
+  height: auto; 
+  padding: 1rem 2rem; 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  border: .2rem solid #FCE18A;
+}
+
+.logo-name {
+  display: none;
+}
+
+.logo {
+  border-radius: 44px;
+  width: 68px;
+  height: 63px;
+  position: relative;
+  object-fit: cover;
+  margin-left: 2rem;
+}
+
+.navigation {
+  margin-left: auto;
+}
+
+.navigation-bar .navigation a {
+  font-size: 2rem;
+  padding: 0 1.5rem;
+  color: var(--white);
+}
+
+.navigation-bar .navigation a:hover {
+  color: var(--yellow);
+}
+
+.navigation-bar #toggler {
+  display: none;
+}
+
+.navigation-bar .hamburger {
+  display: none
+}
+
+.navigation-bar .fa-bars {
+  font-size: 3rem;
+  color: #333;
+  border-radius: .5rem;
+  padding: .5rem 1.5rem;
+  cursor: pointer;
+  border: .1rem solid rgba(0,0,0,.3);
+  display: none;
+}
+/*===================================================*/
+
+/*==================| Main Content Style |==================*/
+header {
+  text-align: center;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  height: 100vh; 
+  position: relative;
+}
+
+#bouquet-frame {
+  position: relative;
+  margin-right: 3rem; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+  background: rgba(255, 239, 180, 0.6);
+  width: 47rem;
+  height: 42.75rem;
+  padding-top: 2rem;
+}
+
+#price-frame {
+  background: rgba(0, 0, 0, 0.1);
+  width: 47rem;
+  height: 42.75rem;
+  position: absolute;
+  left: 0;
+  top: 0.06rem;
+}
+
+#price-label {
+  background: rgba(255, 255, 255, 0.75);
+  width: 47rem; 
+  height: 8rem; 
+  position: absolute;
+  left: 0;
+  top: 28rem; 
+  overflow: hidden;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+}
+
+#price-label h3 {
+  color: var(--black);
+  text-align: center;
+  font-family: var(--footer-font);
+  font-size: 4rem; 
+  font-weight: 800;
+  position: relative;
+  left: 2rem; 
+  top: 0.5rem;
+  padding-bottom: 2rem;
+}
+
+
+#discount {
+  width: 70rem; 
+  position: relative;
+  text-align: left; 
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: flex-start;
+  margin-left: 3rem; 
+}
+
+#discount h1 {
+  color: var(--white);
+  font-size: 6rem; 
+  font-weight: 800;
+  margin-bottom: 1rem;
+  font-family: var(--footer-font);
+
+}
+
+#discount h1 + h1 {
+  font-size: 9rem;
+  margin-bottom: 1rem;
+}
+
+#discount span {
+  color: var(--white);
+  font-size: 5rem;
+  font-weight: 800;
+  font-family: var(--footer-font);
+}
+/*===================================================*/
+
+/*=======| Product Features Contents Style |=========*/
+.outer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 30px 0;
+}
+
+.products-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: #FFEFB4;
+  border-radius: 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  max-width: 1200rem; 
+  width: 95%; 
+  margin: 20px 100px; 
+}
+
+.product-wrapper {
+  display: flex;
+  gap: 110px;
+  justify-content: center;
+  flex-wrap: wrap; 
+  width: 100%;
+}
+
+/* General product card styling */
+.product-card {
+  background-color: var(--white);
+  border-radius: 20px;
+  width: 300px;
+  padding: 15px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.product-img {
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Product description section */
+.product-description {
+  background-color: #fce18a;
+  width: 100%;
+  padding: 10px;
+  border-radius: 0 0 20px 20px;
+}
+
+.product-name {
+  font-family: var(--footer-font);
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.product-price {
+  font-family: var(--footer-font);
+  font-size: 25px;
+  font-weight: 700;
+  margin-top: 5px;
+}
+
+/* Header style */
+.product-feature {
+  background-color: #f9d144;
+  width: 90%;
+  text-align: center;
+  padding: 15px 0;
+  font-family: var(--footer-font);
+  font-size: 48px;
+  font-weight: 900;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+/*===================================================*/
+
+/*=============| Coupon Contents Style |=============*/
+#coupon {
+  background: url(../img/coupon-bg.png);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  min-height: 30vh; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  padding: 2rem;
+  position: relative; 
+  overflow: hidden; 
+}
+
+#coupon h3 {
+  color: var(--white);
+  font-family: var(--footer-font);
+  font-size: 9rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 1rem;
+  z-index: 1;
+}
+
+#coupon span {
+  color: var(--white);
+  font-family: var(--footer-font);
+  font-size: 6rem;
+  font-weight: 800;
+  text-align: center;
+  z-index: 1;
+}
+
+#coupon::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+/*===================================================*/
+
+/*========| Footer & Credit Contents Style |=========*/
+
+footer {
+  position: relative;
+  background: url(../img/footer-bg.png) no-repeat center center;
+  background-size: cover;
+  padding: 2rem 1.5rem;
+  z-index: 1;
+}
+
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(1, 1, 1, 0.7); 
+  z-index: -1; 
+}
+
+footer .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 1rem;
+  z-index: 1;
+  text-align: center;
+}
+
+footer .box-container .box {
+  flex: 1 1 20rem;
+  margin: 1rem;
+}
+
+footer .box-container .box h3 {
+  color: var(--white);
+  font-size: 3.8rem;
+  font-family: var(--footer-font);
+  padding: 0;
+}
+
+footer .box-container .box a {
+  display: block;
+  color: var(--white);
+  font-size: 1.5rem;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+footer .box-container .box a:hover {
+  color: var(--yellow);
+}
+
+.credit {
+  background: var(--black);
+  text-align: center;
+  color: #fff;
+  padding: .85rem;
+  font-style: oblique;
+}
+/*===================================================*/
+
+
+
+
+
+/*=============| Large Desktop Viewports Style |=============*/
+@media (max-width: 1200px) {
+    #discount {
+      text-align:center;
+    }
+
+    #bouquet-frame {
+      display: none;
+    }
+}
+  
+/*=============| Desktop Viewports Style |=============*/
+@media (max-width: 991px) {
+  html {
+      font-size: 58%;
+  }
+  
+  .navigation-bar {
+      padding: 2rem;
+  }
+   
+}
+
+/*=============| Tablet Viewports Style |=============*/
+@media (max-width: 768px) {
+  
+  html {
+    font-size: 55%;
+  } 
+  
+  .navigation-bar {
+    width: 90%;
+    padding: 1rem 1rem;
+  }
+  
+  .navigation-bar .fa-bars {
+    display: block;
+    color: white;
+  }
+
+  .navigation-bar .hamburger {
+    display: block;
+    cursor: pointer; 
+    font-size: 3rem; 
+    transition: transform 0.3s ease;
+    color: white;
+    margin-right: 5rem;
+  }
+  
+  .navigation-bar .navigation {
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    background: #eee;
+    border-top: .1rem solid rgba(0,0,0,.1);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  
+  .navigation-bar #toggler:checked ~ .navigation {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    background-color: transparent;
+  }
+  
+  .navigation-bar .navigation a {
+    margin: 1rem 0;
+    padding: 1.5rem;
+    background: rgba(1, 1, 1, 0.8);
+    color: #fff;
+    border: .18rem solid #FCE18A;
+    border-radius: 5rem;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .products-container {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  #coupon h3 {
+    font-size: 7rem;
+  }
+
+  #coupon span {
+    font-size: 5rem;
+  }
+}
+  
+/*=============| Mobile Viewports Style |=============*/
+  @media (max-width: 480px) {
+  html {
+    font-size: 48%;
+  }
+  
+  .navigation-bar {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+  }
+    
+  .navigation-bar a {
+    padding: 0.5rem 0;
+  }
+  
+  footer .box-container {
+    text-align: left;
+  }
+
+  .products-container {
+    max-width: 100%;
+    padding: 10px; 
+  }
+
+  #coupon {
+    display: none;
+  }
+}
+  
+/*=============| Small Mobile Viewports Style |=============*/
+@media (max-width: 430px) {
+  html {
+    font-size: 41%;
+  }
+  
+  .navigation-bar {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+  }
+    
+  .navigation-bar a {
+    padding: 0.5rem 0;
+  }
+}

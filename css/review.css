@@ -1,0 +1,510 @@
+:root {
+  --footer-font: 'M PLUS Rounded 1c', sans-serif;
+  --header-font: 'Sansita Swashed', sans-serif;
+  --header-content-font: 'Saira', sans-serif;
+  --main-title-font: 'Libre Caslon Text', sans-serif;
+  --yellow: #F9d144;
+  --cream: #FAF5E5;
+  --white: #ffffff;
+  --black: #000000;
+}
+  
+* {
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+  font-family: var(--footer-font);
+  outline: none; border: none;
+  text-decoration: none; 
+  text-transform: capitalize;
+  transition: .2s linear;
+}
+  
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+  overflow-x: hidden;
+  background: #FAF5E5;
+}
+/*===================================================*/
+  
+/*==========| Background-image and frames |==========*/
+#background-photo {
+  background: url(../img/review-bg.png);
+  background-size: cover;
+  background-position: center;
+}
+    
+.intro-header {
+  background: rgba(0, 0, 0, 0.55);
+  min-height: 100vh;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+}
+    
+.yellow-frame {
+  width: 100%;
+  min-height: 100vh; 
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+}
+/*===================================================*/
+
+
+/*=============| Navigations and Icons Section Styles |=============*/
+.navigation-bar {
+  position: fixed;
+  top: 23px; left: 0; right: 0;
+  margin: 0 auto;
+  background: rgba(1, 1, 1, 0.8);
+  border-radius: 106px;
+  width: 80%; 
+  max-width: 869px; 
+  height: auto; 
+  padding: 1rem 2rem; 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  border: .2rem solid #FCE18A;
+}
+
+.logo-name {
+  display: none;
+}
+
+.logo {
+  border-radius: 44px;
+  width: 68px;
+  height: 63px;
+  position: relative;
+  object-fit: cover;
+  margin-left: 2rem;
+}
+
+.navigation {
+  margin-left: auto;
+}
+
+.navigation-bar .navigation a {
+  font-size: 2rem;
+  padding: 0 1.5rem;
+  color: var(--white);
+}
+
+.navigation-bar .navigation a:hover {
+  color: var(--yellow);
+}
+
+.navigation-bar #toggler {
+  display: none;
+}
+
+.navigation-bar .hamburger {
+  display: none
+}
+
+.navigation-bar .fa-bars {
+  font-size: 3rem;
+  color: #333;
+  border-radius: .5rem;
+  padding: .5rem 1.5rem;
+  cursor: pointer;
+  border: .1rem solid rgba(0,0,0,.3);
+  display: none;
+}
+/*===================================================*/
+
+/*=============| header Content Style |=============*/
+header {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 15rem;
+}
+
+.tables {
+  width: 70%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.55);
+  overflow: hidden; 
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.tables, .tables th, .tables td {
+  border: 2px solid black;
+  border-radius: 2rem; 
+  padding: 20px;
+}
+
+.tables th, .tables td {
+  text-align: center;
+}
+
+.row-1, .row-3, .row-5 {
+  background-color: rgba(249, 209, 68, .8);
+}
+
+.row-2, .row-4, .row-6 {
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+.tablet {
+  display: none;
+}
+/*===================================================*/
+
+/*=============| Main Content Style |=============*/
+.review .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 1rem 6rem;
+}
+
+.heading-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.heading {
+  background-color: #f9d144;
+  width: 50%;
+  text-align: center;
+  padding: 15px 0;
+  font-family: var(--footer-font);
+  font-size: 48px;
+  font-weight: 900;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+.review .box-container .box {
+  flex: 1 1 30rem;
+  box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+  border-radius: .5rem;
+  padding: 3rem 2rem;
+  position: relative;
+  background-color: white;
+}
+
+.review .box-container .box .fa-quote-right {
+  position: absolute;
+  bottom: 3rem; right: 3rem;
+  font-size: 6rem;
+  color: var(--yellow);
+}
+
+.review .box-container .box .stars i {
+  color: var(--yellow);
+  font-size: 2rem;
+}
+
+.review .box-container .box p {
+  color: #999;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin-top: 2rem;
+  font-weight: 500;
+}
+
+.review .box-container .box .user-info {
+  display: flex;
+  align-items: center;
+  padding-top: 2rem;
+}
+
+.review .box-container .box .user-info h3 {
+  font-size: 2rem;
+  color: #333;
+}
+
+label {
+  font-size: 2rem;
+  font-weight: 500;
+}
+/*===================================================*/
+
+
+/*==============| Form Content Style |===============*/
+.contact .row form {
+  flex: 1 1 40rem;
+  padding: 2rem 2.5rem;
+  box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+  border: 1rem solid rgba(252, 225, 138, 0.9);
+  background: #FFFDF5;
+  border-radius: .5rem;
+  margin: 2rem 6rem;
+}
+
+.contact .row form .box {
+  padding: 1rem;
+  font-size: 1.7rem;
+  color: #333;
+  text-transform: none;
+  border: .1rem solid rgba(0,0,0,.1);
+  border-radius: .5rem;
+  margin: .7rem 0;
+  width: 100%;
+}
+
+.heading2 {
+  width: 50%; 
+  text-align: center; 
+  margin: 0 auto; 
+  padding: 15px 0;
+  font-family: var(--footer-font);
+  font-size: 40px;
+  font-weight: 900;
+}
+
+
+.btn {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 2rem;
+  background: rgba(255, 199, 0, 1); 
+  padding: 1rem 5%; 
+  cursor: pointer;
+  font-size: 2.3rem;
+  font-family: 'Saira', sans-serif;
+  font-weight: bold;
+  width: auto; 
+  max-width: 100%; 
+}
+
+.contact .row form .box:focus {
+  border-color: var(--yellow)
+}
+
+.contact .row form textarea {
+  height: 15rem;
+  resize: none;
+}
+/*===================================================*/
+
+/*=============| Footer & Credit Content Style |============*/
+footer {
+  position: relative; 
+  background: url(../img/footer-bg.png) no-repeat center center;
+  background-size: cover;
+  padding: 2rem 1.5rem; 
+  z-index: 1; 
+}
+
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(1, 1, 1, 0.7); 
+  z-index: -1; 
+}
+
+footer .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 1rem;
+  z-index: 1; 
+  text-align: center;
+}
+
+footer .box-container .box {
+  flex: 1 1 20rem;
+  margin: 1rem;
+}
+
+footer .box-container .box h3 {
+  color: var(--white);
+  font-size: 3.8rem;
+  font-family: var(--footer-font);
+  padding: 0;
+}
+
+footer .box-container .box a {
+  display: block;
+  color: var(--white);
+  font-size: 1.5rem;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+footer .box-container .box a:hover {
+  color: var(--yellow);
+}
+
+.credit {
+  background: var(--black);
+  text-align: center;
+  color: var(--white);
+  padding: .85rem;
+  font-style: oblique;
+}
+/*===================================================*/
+
+
+/*=============| Desktop Viewports Style |=============*/
+@media (max-width: 991px) {
+  html {
+      font-size: 58%;
+  }
+
+  .navigation-bar {
+      padding: 2rem;
+  }
+
+  .tables {
+    display: None;
+  }
+
+  .tablet {
+    display: block;
+    width: 80%;
+    margin: 5rem auto;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .tablet h3 {
+    color: var(--white);
+    font-size: 10rem;
+    font-family: var(--footer-font);
+    font-weight: 600;
+  }
+
+  .tablet p {
+    color: var(--white);
+    font-size: 3rem;
+    padding-top: 2rem;
+  }
+
+  .heading {
+    font-size: 30px;
+  }
+
+  .headings {
+    font-size: 30px;
+  }
+}
+
+/*=============| Tablet Viewports Style |=============*/
+@media (max-width: 768px) {
+
+  html {
+    font-size: 55%;
+  } 
+
+  .navigation-bar {
+    width: 90%;
+    padding: 1rem 1rem;
+  }
+
+  .navigation-bar .fa-bars {
+    display: block;
+    color: white;
+  }
+
+  .navigation-bar .hamburger {
+    display: block;
+    cursor: pointer; 
+    font-size: 3rem; 
+    transition: transform 0.3s ease; 
+    color: white;
+    margin-right: 5rem;
+  }
+
+  .navigation-bar .navigation {
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    background: #eee;
+    border-top: .1rem solid rgba(0,0,0,.1);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  .navigation-bar #toggler:checked ~ .navigation {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    background-color: transparent;
+  }
+
+  .navigation-bar .navigation a {
+    margin: 1rem 0;
+    padding: 1.5rem;
+    background: rgba(1, 1, 1, 0.8);
+    color: #fff;
+    border: .18rem solid #FCE18A;
+    border-radius: 5rem;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .heading {
+    font-size: 25px;
+  }
+
+  .heading2 {
+    width: 70%;
+    font-size: 23px;
+  }
+}
+
+/*=============| Mobile Viewports Style |=============*/
+@media (max-width: 480px) {
+  html {
+    font-size: 48%;
+  }
+
+  .navigation-bar {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+  }
+    
+  .navigation-bar a {
+    padding: 0.5rem 0;
+  }
+
+  footer .box-container {
+    text-align: left;
+  }
+
+  .heading {
+    font-size: 15px;
+  }
+
+  .heading2 {
+    width: 80%;
+    font-size: 15px;
+  }
+}
+
+/*=============| Small Mobile Viewports Style |=============*/
+@media (max-width: 430px) {
+  html {
+    font-size: 41%;
+  }
+
+  .navigation-bar {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+  }
+    
+  .navigation-bar a {
+    padding: 0.5rem 0;
+  }
+}
+
+
